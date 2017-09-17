@@ -18,6 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="GP9-Xx-iE1">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GP9-Xx-iE1" id="QXl-X2-J0Z">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="aTU-x8-glb" id="ZoG-Yn-fMX"/>
                             <outlet property="delegate" destination="aTU-x8-glb" id="7f0-cn-dmJ"/>
@@ -162,6 +172,6 @@
         <image name="capture" width="90" height="90"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Zhd-UJ-P4p"/>
+        <segue reference="09G-EI-pXq"/>
     </inferredMetricsTieBreakers>
 </document>

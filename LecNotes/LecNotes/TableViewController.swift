@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import os.log
 
 class TableViewController: UITableViewController {
 
     @IBOutlet var tableViewOut: UITableView!
     
     var directoryContents = [URL]()
+    
+    var entrys = [LecImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +25,12 @@ class TableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        
+        
+        
+        
+        
         
         let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         
@@ -35,7 +44,7 @@ class TableViewController: UITableViewController {
         }
         
         
-        
+        /*
         let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
         let displayWidth: CGFloat = self.view.frame.width
         let displayHeight: CGFloat = self.view.frame.height
@@ -44,8 +53,14 @@ class TableViewController: UITableViewController {
         tableViewOut.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
         tableViewOut.dataSource = self
         tableViewOut.delegate = self
-        self.view.addSubview(tableViewOut)
+        self.view.addSubview(tableViewOut)*/
     }
+    
+    
+    
+    
+    
+    /*
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Num: \(indexPath.row)")
@@ -62,6 +77,11 @@ class TableViewController: UITableViewController {
         return cell
     }
     
+    
+    
+    
+    
+    */
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
@@ -116,5 +136,20 @@ class TableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    private func saveEntrys() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(entrys, toFile: LecImage.ArchiveURL.path)
+        if isSuccessfulSave {
+            os_log("Images successfully saved.", log: OSLog.default, type: .debug)
+        } else {
+            os_log("Failed to save meals...", log: OSLog.default, type: .error)
+        }
+    }
+    
+    private func loadEntrys() -> [LecImage]?  {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: LecImage.ArchiveURL.path) as? [Meal]
+    }
+
 
 }
