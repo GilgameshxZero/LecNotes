@@ -39,5 +39,7 @@
 	</array>
 	<key>NSCameraUsageDescription</key>
 	<string>Photos of lectures</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Save lecture notes</string>
 </dict>
 </plist>

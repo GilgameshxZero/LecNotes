@@ -12,7 +12,6 @@ import AVFoundation
 class ViewController: UIViewController {
 	
 	@IBOutlet weak var previewView: UIView!
-	@IBOutlet weak var captureImageView: UIImageView!
 	
 	var session: AVCaptureSession?
 	var stillImageOutput: AVCaptureStillImageOutput?
@@ -27,8 +26,14 @@ class ViewController: UIViewController {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-
-	@IBAction func didTakePhoto(_ sender: UIButton) {
+	@IBAction func takePicture(_ sender: UIButton) {
+		if let videoConnection = stillImageOutput?.connection(withMediaType: AVMediaTypeVideo) {
+			stillImageOutput?.captureStillImageAsynchronously(from: videoConnection) {
+				(imageDataSampleBuffer, error) -> Void in
+				let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer)
+				UIImageWriteToSavedPhotosAlbum(UIImage(data: imageData!)!, nil, nil, nil)
+			}
+		}
 	}
 
 	override func viewWillAppear(_ animated: Bool) {
@@ -68,6 +73,8 @@ class ViewController: UIViewController {
 		videoPreviewLayer!.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
 		previewView.layer.addSublayer(videoPreviewLayer!)
 		session!.startRunning()
+		
+		videoPreviewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
 		
 		videoPreviewLayer!.frame = previewView.bounds
 	}

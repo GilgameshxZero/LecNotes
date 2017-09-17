@@ -1,0 +1,7 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "b7fc5f3cade3dfdb5da231ebd83699ad"
+build_time: [558942930, 335993000]
+inputs:
+  "/Users/Gilgamesh/Documents/GitHub/LecNotes/Monochrome21/Monochrome21/ViewController.swift": [558942582, 0]
+  "/Users/Gilgamesh/Documents/GitHub/LecNotes/Monochrome21/Monochrome21/AppDelegate.swift": [558939566, 0]
+  "/Users/Gilgamesh/Documents/GitHub/LecNotes/Monochrome21/Monochrome21/ViewController2.swift": [558942145, 0]
