@@ -152,13 +152,20 @@ SWIFT_CLASS("_TtC12Monochrome2011AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UILabel;
+@class UITextField;
+@class UIButton;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC12Monochrome2014ViewController")
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITextFieldDelegate>
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified label;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified nameTextField;
 - (void)viewDidLoad;
-- (void)didReceiveMemoryWarning;
+- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)nameTextField SWIFT_WARN_UNUSED_RESULT;
+- (void)textFieldDidEndEditing:(UITextField * _Nonnull)nameTextField;
+- (IBAction)button:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
