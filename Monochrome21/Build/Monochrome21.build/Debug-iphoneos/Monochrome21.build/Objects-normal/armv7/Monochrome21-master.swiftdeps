@@ -1,0 +1,7 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "abdbb9eeb4bc9e412750169387cec0c2"
+build_time: [558946970, 323092000]
+inputs:
+  "/Users/Gilgamesh/Documents/GitHub/LecNotes/Monochrome21/Monochrome21/ViewController.swift": [558946233, 0]
+  "/Users/Gilgamesh/Documents/GitHub/LecNotes/Monochrome21/Monochrome21/AppDelegate.swift": [558939566, 0]
+  "/Users/Gilgamesh/Documents/GitHub/LecNotes/Monochrome21/Monochrome21/fromLeftToRightSegue.swift": [558946955, 0]

@@ -36,6 +36,7 @@ depends-top-level:
 - "UIButton"
 - !private "UIImage"
 - !private "UIImageWriteToSavedPhotosAlbum"
+- "UISwipeGestureRecognizer"
 - "UIView"
 - "UIViewController"
 - "ViewController"
@@ -417,6 +418,7 @@ depends-member:
 - ["CSo8NSObject", "UIButton"]
 - !private ["CSo8NSObject", "UIImage"]
 - !private ["CSo8NSObject", "UIImageWriteToSavedPhotosAlbum"]
+- ["CSo8NSObject", "UISwipeGestureRecognizer"]
 - ["CSo8NSObject", "UIView"]
 - !private ["CSo8NSObject", "Void"]
 - !private ["CSo8NSObject", "addInput"]
@@ -441,6 +443,7 @@ depends-member:
 - !private ["CSo8NSObject", "sessionPreset"]
 - !private ["CSo8NSObject", "startRunning"]
 - ["CSo8NSObject", "stillImageOutput"]
+- ["CSo8NSObject", "swipeGestureRecognizer"]
 - ["CSo8NSObject", "takePicture"]
 - !private ["CSo8NSObject", "videoGravity"]
 - !private ["CSo8NSObject", "videoOrientation"]
@@ -597,6 +600,7 @@ depends-member:
 - ["CSo11UIResponder", "UIButton"]
 - !private ["CSo11UIResponder", "UIImage"]
 - !private ["CSo11UIResponder", "UIImageWriteToSavedPhotosAlbum"]
+- ["CSo11UIResponder", "UISwipeGestureRecognizer"]
 - ["CSo11UIResponder", "UIView"]
 - !private ["CSo11UIResponder", "Void"]
 - !private ["CSo11UIResponder", "bounds"]
@@ -607,6 +611,7 @@ depends-member:
 - !private ["CSo11UIResponder", "print"]
 - ["CSo11UIResponder", "session"]
 - ["CSo11UIResponder", "stillImageOutput"]
+- ["CSo11UIResponder", "swipeGestureRecognizer"]
 - ["CSo11UIResponder", "takePicture"]
 - ["CSo11UIResponder", "videoPreviewLayer"]
 - ["CSo11UIResponder", "viewDidLoad"]
@@ -706,6 +711,7 @@ depends-member:
 - ["CSo16UIViewController", "UIButton"]
 - !private ["CSo16UIViewController", "UIImage"]
 - !private ["CSo16UIViewController", "UIImageWriteToSavedPhotosAlbum"]
+- ["CSo16UIViewController", "UISwipeGestureRecognizer"]
 - ["CSo16UIViewController", "UIView"]
 - !private ["CSo16UIViewController", "Void"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
@@ -714,6 +720,7 @@ depends-member:
 - !private ["CSo16UIViewController", "print"]
 - ["CSo16UIViewController", "session"]
 - ["CSo16UIViewController", "stillImageOutput"]
+- ["CSo16UIViewController", "swipeGestureRecognizer"]
 - ["CSo16UIViewController", "takePicture"]
 - ["CSo16UIViewController", "videoPreviewLayer"]
 - ["CSo16UIViewController", "viewDidLoad"]
@@ -736,6 +743,7 @@ depends-member:
 - ["C12Monochrome2114ViewController", "UIButton"]
 - !private ["C12Monochrome2114ViewController", "UIImage"]
 - !private ["C12Monochrome2114ViewController", "UIImageWriteToSavedPhotosAlbum"]
+- ["C12Monochrome2114ViewController", "UISwipeGestureRecognizer"]
 - ["C12Monochrome2114ViewController", "UIView"]
 - !private ["C12Monochrome2114ViewController", "Void"]
 - ["C12Monochrome2114ViewController", "deinit"]
@@ -745,6 +753,7 @@ depends-member:
 - !private ["C12Monochrome2114ViewController", "print"]
 - ["C12Monochrome2114ViewController", "session"]
 - ["C12Monochrome2114ViewController", "stillImageOutput"]
+- !private ["C12Monochrome2114ViewController", "swipeGestureRecognizer"]
 - ["C12Monochrome2114ViewController", "takePicture"]
 - ["C12Monochrome2114ViewController", "videoPreviewLayer"]
 - ["C12Monochrome2114ViewController", "viewDidLoad"]
@@ -876,4 +885,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
-interface-hash: "2c5f8b19d100750b22c1bc4244eb8eb3"
+interface-hash: "a05f7479a45c8bbe9ef9ffc295376d5f"

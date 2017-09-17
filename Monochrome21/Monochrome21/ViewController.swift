@@ -17,9 +17,13 @@ class ViewController: UIViewController {
 	var stillImageOutput: AVCaptureStillImageOutput?
 	var videoPreviewLayer: AVCaptureVideoPreviewLayer?
 	
+	private var swipeGestureRecognizer: UISwipeGestureRecognizer?
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
+		//swipeGestureRecognizer = MySwipeGestureRecognizer(target: self, swipeLeftSegue: "yourSwipeLeftSegue", swipeRightSeque: "yourSwipeRightSegue")
+		//view.addGestureRecognizer(swipeGestureRecognizer!)
 	}
 
 	override func didReceiveMemoryWarning() {

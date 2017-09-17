@@ -25,7 +25,11 @@
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="8uG-Jr-ISb">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Wb6-bB-fKe" appends="YES" id="4yQ-Uv-5a4"/>
+                                </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AjO-zL-5df">
                                 <rect key="frame" x="24" y="579" width="64" height="64"/>
@@ -34,7 +38,7 @@
                                     <constraint firstAttribute="width" constant="64" id="gmO-UO-x78"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="T8X-6o-95B" kind="show" id="8rg-2x-TwB"/>
+                                    <segue destination="T8X-6o-95B" kind="show" identifier="" id="8rg-2x-TwB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lcs-Mi-lPy">
@@ -82,6 +86,7 @@
                         <outlet property="previewView" destination="8uG-Jr-ISb" id="fIH-vp-rsn"/>
                     </connections>
                 </viewController>
+                <swipeGestureRecognizer direction="right" id="Wb6-bB-fKe"/>
             </objects>
             <point key="canvasLocation" x="877.60000000000002" y="35.532233883058474"/>
         </scene>

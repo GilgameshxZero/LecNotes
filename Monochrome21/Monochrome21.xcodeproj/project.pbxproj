@@ -13,6 +13,8 @@
 		A680DAED1F6E38AE00344428 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A680DAEC1F6E38AE00344428 /* Assets.xcassets */; };
 		A680DAF01F6E38AE00344428 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A680DAEE1F6E38AE00344428 /* LaunchScreen.storyboard */; };
 		A680DAFB1F6E38AE00344428 /* Monochrome21Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680DAFA1F6E38AE00344428 /* Monochrome21Tests.swift */; };
+		A680DB081F6E558B00344428 /* fromLeftToRightSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680DB071F6E558B00344428 /* fromLeftToRightSegue.swift */; };
+		A680DB0A1F6E55E600344428 /* UISwipeGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680DB091F6E55E600344428 /* UISwipeGestureRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		A680DAF61F6E38AE00344428 /* Monochrome21Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Monochrome21Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A680DAFA1F6E38AE00344428 /* Monochrome21Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monochrome21Tests.swift; sourceTree = "<group>"; };
 		A680DAFC1F6E38AE00344428 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A680DB071F6E558B00344428 /* fromLeftToRightSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fromLeftToRightSegue.swift; sourceTree = "<group>"; };
+		A680DB091F6E55E600344428 /* UISwipeGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwipeGestureRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			children = (
 				A680DAE51F6E38AE00344428 /* AppDelegate.swift */,
 				A680DAE71F6E38AE00344428 /* ViewController.swift */,
+				A680DB071F6E558B00344428 /* fromLeftToRightSegue.swift */,
+				A680DB091F6E55E600344428 /* UISwipeGestureRecognizer.swift */,
 				A680DAE91F6E38AE00344428 /* Main.storyboard */,
 				A680DAEC1F6E38AE00344428 /* Assets.xcassets */,
 				A680DAEE1F6E38AE00344428 /* LaunchScreen.storyboard */,
@@ -203,6 +209,8 @@
 			files = (
 				A680DAE81F6E38AE00344428 /* ViewController.swift in Sources */,
 				A680DAE61F6E38AE00344428 /* AppDelegate.swift in Sources */,
+				A680DB0A1F6E55E600344428 /* UISwipeGestureRecognizer.swift in Sources */,
+				A680DB081F6E558B00344428 /* fromLeftToRightSegue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
