@@ -152,13 +152,26 @@ SWIFT_CLASS("_TtC12Monochrome2111AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIView;
+@class UIImageView;
+@class AVCaptureSession;
+@class AVCaptureStillImageOutput;
+@class AVCaptureVideoPreviewLayer;
+@class UIButton;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC12Monochrome2114ViewController")
 @interface ViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified previewView;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified captureImageView;
+@property (nonatomic, strong) AVCaptureSession * _Nullable session;
+@property (nonatomic, strong) AVCaptureStillImageOutput * _Nullable stillImageOutput;
+@property (nonatomic, strong) AVCaptureVideoPreviewLayer * _Nullable videoPreviewLayer;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+- (IBAction)didTakePhoto:(UIButton * _Nonnull)sender;
+- (void)viewWillAppear:(BOOL)animated;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
