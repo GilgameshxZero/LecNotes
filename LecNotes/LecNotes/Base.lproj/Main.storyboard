@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="F8P-ii-gIY">
+            <objects>
+                <tableViewController id="aTU-x8-glb" customClass="TableViewController" customModule="LecNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="yj9-TQ-wRy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="aTU-x8-glb" id="ZoG-Yn-fMX"/>
+                            <outlet property="delegate" destination="aTU-x8-glb" id="7f0-cn-dmJ"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="tableView" destination="yj9-TQ-wRy" id="cdw-Yg-HaA"/>
+                        <segue destination="BYZ-38-t0r" kind="show" id="09G-EI-pXq"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lZo-a2-gGA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="176" y="33"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LecNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="8uG-Jr-ISb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Wb6-bB-fKe" appends="YES" id="4yQ-Uv-5a4"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FA5-zq-Gag">
+                                <rect key="frame" x="0.0" y="637" width="74" height="30"/>
+                                <state key="normal" title="Collection"/>
+                                <connections>
+                                    <action selector="clickCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kkd-xs-REN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EL4-bw-idW">
+                                <rect key="frame" x="171" y="637" width="33" height="30"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="Take"/>
+                                <connections>
+                                    <action selector="takePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OZi-TB-hvX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8uG-Jr-ISb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6zT-eN-Smi"/>
+                            <constraint firstAttribute="bottom" secondItem="EL4-bw-idW" secondAttribute="bottom" id="Nxf-uC-CFC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8uG-Jr-ISb" secondAttribute="bottom" id="Rgh-oB-uFe"/>
+                            <constraint firstAttribute="trailing" secondItem="8uG-Jr-ISb" secondAttribute="trailing" id="b7g-OL-s8t"/>
+                            <constraint firstItem="8uG-Jr-ISb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fLF-m6-Ubv"/>
+                            <constraint firstAttribute="bottom" secondItem="FA5-zq-Gag" secondAttribute="bottom" id="qQc-tr-FaU"/>
+                            <constraint firstItem="EL4-bw-idW" firstAttribute="centerX" secondItem="8uG-Jr-ISb" secondAttribute="centerX" id="w3G-zl-rBo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="previewView" destination="8uG-Jr-ISb" id="gKP-L7-dKF"/>
+                        <segue destination="f26-Bn-sOM" kind="show" identifier="segueToClass" id="Pcd-6e-h52"/>
+                        <segue destination="aTU-x8-glb" kind="show" identifier="segueToCollection" id="1g2-4h-DYx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="Wb6-bB-fKe"/>
+            </objects>
+            <point key="canvasLocation" x="908" y="34"/>
+        </scene>
+        <!--Input View Controller-->
+        <scene sceneID="VWt-ww-3Qn">
+            <objects>
+                <viewController id="f26-Bn-sOM" customClass="InputViewController" customModule="LecNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9dt-hO-ulK"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZhE-3s-Xuk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="poc-6D-iWX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aVP-9D-DIT">
+                                <rect key="frame" x="36" y="28" width="303" height="306.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What Class is This?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2F-nd-69w">
+                                        <rect key="frame" x="77.5" y="0.0" width="148.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="3.091" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EhG-qS-PVT">
+                                        <rect key="frame" x="0.0" y="28.5" width="303" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oBB-tS-evv">
+                                        <rect key="frame" x="31.5" y="66.5" width="240" height="240"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="240" id="gMg-ea-rzP"/>
+                                            <constraint firstAttribute="width" constant="240" id="hPj-fW-7Wz"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="EhG-qS-PVT" firstAttribute="leading" secondItem="aVP-9D-DIT" secondAttribute="leading" id="Q7q-7b-9P7"/>
+                                    <constraint firstAttribute="trailing" secondItem="EhG-qS-PVT" secondAttribute="trailing" id="jpn-NK-SSI"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aVP-9D-DIT" firstAttribute="leading" secondItem="poc-6D-iWX" secondAttribute="leadingMargin" constant="20" id="5c2-Uc-r7s"/>
+                            <constraint firstItem="aVP-9D-DIT" firstAttribute="top" secondItem="9dt-hO-ulK" secondAttribute="bottom" constant="8" id="Egj-Tg-VGg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aVP-9D-DIT" secondAttribute="trailing" constant="20" id="bsm-8q-kH1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="EhG-qS-PVT" id="Dj6-B9-x8w"/>
+                        <outlet property="photoImageView" destination="oBB-tS-evv" id="All-cl-ghU"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="segueClassToCam" id="Zhd-UJ-P4p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u8v-gf-eLF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1692" y="33.733133433283363"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="09G-EI-pXq"/>
+    </inferredMetricsTieBreakers>
+</document>
