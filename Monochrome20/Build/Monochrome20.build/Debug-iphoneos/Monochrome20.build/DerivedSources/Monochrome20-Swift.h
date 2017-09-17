@@ -152,20 +152,27 @@ SWIFT_CLASS("_TtC12Monochrome2011AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIImageView;
 @class UILabel;
 @class UITextField;
 @class UIButton;
+@class UITapGestureRecognizer;
+@class UIImagePickerController;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC12Monochrome2014ViewController")
-@interface ViewController : UIViewController <UITextFieldDelegate>
+@interface ViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate>
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified image;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified label;
-@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified nameTextField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified text;
 - (void)viewDidLoad;
-- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)nameTextField SWIFT_WARN_UNUSED_RESULT;
-- (void)textFieldDidEndEditing:(UITextField * _Nonnull)nameTextField;
 - (IBAction)button:(UIButton * _Nonnull)sender;
+- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)text SWIFT_WARN_UNUSED_RESULT;
+- (void)textFieldDidEndEditing:(UITextField * _Nonnull)textField;
+- (IBAction)gestureRecogniser:(UITapGestureRecognizer * _Nonnull)sender;
+- (void)imagePickerControllerDidCancel:(UIImagePickerController * _Nonnull)picker;
+- (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *, id> * _Nonnull)info;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
